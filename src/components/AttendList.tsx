@@ -6,6 +6,7 @@ import {
   MoreHorizontal,
   Search,
 } from "lucide-react";
+import { IconButton } from "./IconButton";
 
 export function AttendList() {
   return (
@@ -15,7 +16,7 @@ export function AttendList() {
         <div className="px-3 w-72 py-1.5 border border-white/10 rounded-lg text-sm gap-3 flex items-center">
           <Search className="size-4 text-green-200" />
           <input
-            className="bg-transparent flex-1 outline-none border-0 "
+            className=" bg-transparent flex-1 outline-none border-0 p-0 text-sm  "
             placeholder="Search Participants..."
           />
         </div>
@@ -28,7 +29,10 @@ export function AttendList() {
                 style={{ width: 48 }}
                 className="py-3 px-4 text-sm  font-semibold text-left "
               >
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  className="size-4 bg-black/20 rounded border border-white/10"
+                />
               </th>
               <th className="py-3 px-4  text-sm font-semibold text-left">
                 Code
@@ -53,10 +57,13 @@ export function AttendList() {
               return (
                 <tr
                   key={i}
-                  className="border-b border-white/10 hover:bg-white/5 checked:"
+                  className="border-b border-white/10 hover:bg-white/5 "
                 >
-                  <td className="py-3 px-4 text-sm text-zinc-400">
-                    <input type="checkbox" />
+                  <td className="py-3 px-4 text-sm text-zinc-300 ">
+                    <input
+                      type="checkbox"
+                      className="size-4 bg-black/20 rounded border border-white/10 "
+                    />
                   </td>
                   <td className="py-3 px-4 text-sm text-zinc-300">1233455</td>
                   <td className="py-3 px-4 text-sm text-zinc-300">
@@ -74,9 +81,9 @@ export function AttendList() {
                     9 dia atrás
                   </td>
                   <td className="py-3 px-4 text-sm text-zinc-300">
-                    <button className="bg-black/10 border border-white/20 rounded-md p-1.5">
+                    <IconButton transparent>
                       <MoreHorizontal className="size-4 " />
-                    </button>
+                    </IconButton>
                   </td>
                 </tr>
               );
@@ -98,18 +105,18 @@ export function AttendList() {
                   <span>Page 1 de 20</span>
 
                   <div className="flex gap-1.5">
-                    <button className="bg-white/10 border border-white/10 rounded-md p-1.5">
-                      <ChevronsLeft className="size-4 " />
-                    </button>
-                    <button className="bg-white/10 border border-white/10 rounded-md p-1.5">
+                    <IconButton transparent>
                       <ChevronLeft className="size-4 " />
-                    </button>
-                    <button className="bg-white/10 border border-white/10 rounded-md p-1.5">
+                    </IconButton>
+                    <IconButton transparent>
+                      <ChevronsLeft className="size-4 " />
+                    </IconButton>
+                    <IconButton>
                       <ChevronRight className="size-4 " />
-                    </button>
-                    <button className="bg-white/10 border border-white/10 rounded-md p-1.5">
+                    </IconButton>
+                    <IconButton>
                       <ChevronsRight className="size-4 " />
-                    </button>
+                    </IconButton>
                   </div>
                 </div>
               </td>
