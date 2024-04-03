@@ -15,7 +15,7 @@ export function AttendList() {
         <div className="px-3 w-72 py-1.5 border border-white/10 rounded-lg text-sm gap-3 flex items-center">
           <Search className="size-4 text-green-200" />
           <input
-            className="bg-transparent flex-1 outline-none"
+            className="bg-transparent flex-1 outline-none border-0 "
             placeholder="Search Participants..."
           />
         </div>
